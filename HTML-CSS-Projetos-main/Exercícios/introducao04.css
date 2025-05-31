@@ -1,0 +1,35 @@
+h1 {
+    color: rgb(17, 141, 44);
+}
+
+body {
+    background-color: rgb(33, 32, 117);
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 51px;
+    font-style: oblique;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: rgb(191, 15, 214);
+    font-variant: small-caps;
+}
+
+p {
+    text-indent: 58px;
+    color: crimson;
+    text-align: left;
+}
+
+a{
+    text-decoration: none;
+    font-variant: normal;
+    color: rgb(255, 238, 0);
+}
+
