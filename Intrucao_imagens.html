@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhando com Imagens</title>
+
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --accent-color: #00bcd4;
+      --card-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    h1,
+    h2 {
+      color: var(--accent-color);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .images-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .images-grid img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .images-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 16px rgba(0, 255, 255, 0.5);
+    }
+
+    .float-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .float-box {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .float-box img {
+      width: 150px;
+      flex-shrink: 0;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .float-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+      }
+
+      .float-box img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Trabalhando com Imagens</h1>
+
+    <div class="section">
+      <h2>Imagens Vetoriais vs Bitmap</h2>
+      <div class="images-grid">
+        <img src="imagens/logo_ser-frontend-ico.png" alt="Logotipo PNG">
+        <img src="imagens/logo_ser-frontend-ico.svg" alt="Logotipo SVG">
+      </div>
+      <p>
+        A imagem à esquerda é uma imagem **bitmap (PNG)**, composta por pixels. Se for ampliada demais, pode perder qualidade.
+        Já a imagem à direita é uma **imagem vetorial (SVG)**, que usa fórmulas matemáticas para formar os desenhos, mantendo a qualidade
+        mesmo quando redimensionada. Vetores são ideais para logotipos e ícones escaláveis.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Imagens com Fundo Transparente</h2>
+      <div class="images-grid">
+        <img src="imagens/logo_ser-frontend-ico-transparente.gif" alt="GIF Transparente">
+        <img src="imagens/logo_ser-frontend-ico-transparente.png" alt="PNG Transparente">
+      </div>
+      <p>
+        Essas imagens demonstram o uso de **transparência**. Tanto o formato **GIF** quanto o **PNG** podem ter partes transparentes,
+        o que é útil para sobrepor imagens em fundos diferentes. No geral, **PNG** tem melhor qualidade e suporte para mais cores,
+        sendo mais indicado para transparências modernas.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>GIF Animado</h2>
+      <div class="images-grid">
+        <img src="imagens/walk.gif" alt="Animação de mulher andando">
+      </div>
+      <p>
+        O formato **GIF** também pode ser usado para **animações simples**. Ele reproduz uma sequência de quadros, como mostrado acima,
+        criando um pequeno vídeo em looping. Embora limitado em cores, é bastante usado em memes e ícones animados.
+      </p>
+      <p style="text-align: center;">
+        Fonte:
+        <a href="https://www.pinterest.com/pin/209769295122019504/" target="_blank">Pinterest ↗</a>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Float (Texto com imagem ao lado)</h2>
+      <div class="float-section">
+
+        <div class="float-box">
+          <img src="imagens/html5.png" alt="HTML5">
+          <div>
+            <p><strong>HTML</strong> (HyperText Markup Language) é a linguagem usada para estruturar o conteúdo de páginas na web.
+              Ele define elementos como títulos, parágrafos, listas, links, imagens e muito mais. Sem HTML, não há página visível no navegador.</p>
+          </div>
+        </div>
+
+        <div class="float-box">
+          <img src="imagens/css3.png" alt="CSS3">
+          <div>
+            <p><strong>CSS</strong> (Cascading Style Sheets) é responsável por estilizar o conteúdo definido no HTML.
+              Com ele, podemos mudar cores, fontes, tamanhos, posicionamentos, adicionar animações e criar layouts modernos.
+              HTML é a estrutura; CSS é o visual.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
